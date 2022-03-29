@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("/5/Fonts/Roboto-Medium.ttf") format("ttf");
+}
+
+:root {
+    --Primary: #6750A4;
+    --OnPrimary: #FFffFF;
+    --Surface:#FFFBFE;
+    --Outline: #79747E;
+
+    --SecondaryContainer: #E8DEF8;
+    --OnSecondaryContainer: #1E192B;
+
+
+    --LabelMedium_Size: 12px;
+    --LabelMedium_LineHeight: 16px;
+    --Large_Weight: 500;
+}
+
+.Filled {
+    background-color: var(--Primary);
+    color: var(--OnPrimary);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: var(--Large_Weight);
+    font-family: 'Roboto Medium';
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+    cursor:pointer;
+}
+
+.Tonal {
+    background-color: var(--SecondaryContainer);
+    color: var(--OnSecondaryContainer);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: 600;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+    cursor:pointer;
+}
+
+
+.Outlined {
+    background-color: var(--Surface);
+    color: var(--Primary);
+    border-color: var(--Outline);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: 600;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+.Text {
+    background-color: var(--Surface);
+    color: var(--Primary);
+    border-color: var(--Outline);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: 600;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+    cursor:pointer;
+}
