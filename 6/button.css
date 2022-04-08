@@ -1,0 +1,91 @@
+
+:root {
+    --primary: #6750A4;
+    --on-primary: #FFffFF;
+    --surface:#FFFBFE;
+    --on-surface:#1C1B1F;
+    --Outline: #79747E;
+
+    --SecondaryContainer: #E8DEF8;
+    --OnSecondaryContainer: #1E192B;
+
+
+    --LabelMedium_Size: 12px;
+    --LabelMedium_LineHeight: 16px;
+    --Large_Weight: 500;
+}
+
+.btn{
+    --height: 40px;
+    height: var(--height);
+    border-radius: calc( var(--height) / 2 );
+    margin: max(8px, calc(48px - var(--height))) 0px 0px 16px;
+    padding: 0 24px;
+    line-height: calc(var(--height) - 4px);
+    vertical-align: middle;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.1em;
+	border: 2px solid transparent;
+    display: inline-block;
+    align-items: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn > *{
+    vertical-align: middle;
+}
+.btn i{
+    margin: 0 -8px 0 0px;
+    padding: 0px;
+}
+.btn.primary{
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+.btn:disabled{ /* Disabled */
+    cursor: default;
+    opacity: 38%;
+}
+.btn.primary:disabled{ /* Disabled */
+    background: 
+            linear-gradient(
+                rgba(255, 255, 255, 0.88),
+                rgba(255, 255, 255, 0.88)
+            ),
+            var(--on-surface);
+    color:  var(--on-surface);
+}
+
+.btn.primary:enabled:hover { /* Hovered */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.08)
+    ),
+    var(--primary);
+    color:  var(--on-primary);
+}
+
+.btn.primary:enabled:focus { /* Focused */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.08)
+    ),
+    var(--primary);
+    color:  var(--on-primary);
+}
+
+.btn.primary:enabled:active { /* Pressed */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.08)
+    ),
+    var(--primary);
+    color:  var(--on-primary);
+}
