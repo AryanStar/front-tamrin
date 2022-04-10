@@ -1,13 +1,18 @@
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("/5/Fonts/Roboto-Medium.ttf") format("ttf");
+}
 
 :root {
     --primary: #6750A4;
     --on-primary: #FFffFF;
-    --surface:#FFFBFE;
-    --on-surface:#1C1B1F;
+    --Surface:#FFFBFE;
     --Outline: #79747E;
+    --on-surface:#1C1B1F;
 
-    --SecondaryContainer: #E8DEF8;
-    --OnSecondaryContainer: #1E192B;
+
+    --secondary-container: #E8DEF8;
+    --on-secondary-container: #1E192B;
 
 
     --LabelMedium_Size: 12px;
@@ -15,42 +20,74 @@
     --Large_Weight: 500;
 }
 
-.btn{
-    --height: 40px;
-    height: var(--height);
-    border-radius: calc( var(--height) / 2 );
-    margin: max(8px, calc(48px - var(--height))) 0px 0px 16px;
-    padding: 0 24px;
-    line-height: calc(var(--height) - 4px);
-    vertical-align: middle;
-    text-align: center;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: Roboto, sans-serif;
-    letter-spacing: 0.1em;
-	border: 2px solid transparent;
-    display: inline-block;
-    align-items: normal;
-    text-decoration: none;
-    cursor: pointer;
-}
-.btn > *{
-    vertical-align: middle;
-}
-.btn i{
-    margin: 0 -8px 0 0px;
-    padding: 0px;
-}
-.btn.primary{
+.Filled {
     background-color: var(--primary);
     color: var(--on-primary);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: var(--Large_Weight);
+    font-family: 'Roboto Medium';
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+    cursor:pointer;
 }
-.btn:disabled{ /* Disabled */
+
+.Tonal {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: 600;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+    cursor:pointer;
+}
+
+
+.Outlined {
+    background-color: var(--Surface);
+    color: var(--primary);
+    border-color: var(--Outline);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: 600;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+.Text {
+    background-color: var(--Surface);
+    color: var(--primary);
+    border-color: var(--Outline);
+    font-size: var(--LabelMedium_Size);
+    line-height: var(--LabelMedium_LineHeight);
+    font-weight: 600;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+    cursor:pointer;
+}
+
+.btn.Filled:disabled{ /* Disabled */
     cursor: default;
     opacity: 38%;
 }
-.btn.primary:disabled{ /* Disabled */
+.btn.Filled:disabled{ /* Disabled */
     background: 
             linear-gradient(
                 rgba(255, 255, 255, 0.88),
@@ -60,32 +97,215 @@
     color:  var(--on-surface);
 }
 
-.btn.primary:enabled:hover { /* Hovered */
+.btn.Filled:enabled:hover { /* Hovered */
     background: 
     linear-gradient(
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.08)
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
     ),
     var(--primary);
     color:  var(--on-primary);
 }
 
-.btn.primary:enabled:focus { /* Focused */
+.btn.Filled:enabled:focus { /* Focused */
     background: 
     linear-gradient(
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.08)
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
     ),
     var(--primary);
     color:  var(--on-primary);
 }
 
-.btn.primary:enabled:active { /* Pressed */
+.btn.Filled:enabled:active { /* Pressed */
     background: 
     linear-gradient(
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.08)
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
     ),
     var(--primary);
     color:  var(--on-primary);
+}
+
+
+.btn.Filled:disabled{ /* Disabled */
+    cursor: default;
+    opacity: 38%;
+}
+.btn.Filled:disabled{ /* Disabled */
+    background: 
+            linear-gradient(
+                rgba(255, 255, 255, 0.88),
+                rgba(255, 255, 255, 0.88)
+            ),
+            var(--on-surface);
+    color:  var(--on-surface);
+}
+
+.btn.Filled:enabled:hover { /* Hovered */
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
+    ),
+    var(--primary);
+    color:  var(--on-primary);
+}
+
+.btn.Filled:enabled:focus { /* Focused */
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
+    ),
+    var(--primary);
+    color:  var(--on-primary);
+}
+
+.btn.Filled:enabled:active { /* Pressed */
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.12),
+        rgba(0, 0, 0, 0.12)
+    ),
+    var(--primary);
+    color:  var(--on-primary);
+}
+
+
+.btn.Tonal:disabled{ /* Disabled */
+    cursor: default;
+    opacity: 38%;
+}
+.btn.Tonal:disabled{ /* Disabled */
+    background: 
+            linear-gradient(
+                rgba(255, 255, 255, 0.88),
+                rgba(255, 255, 255, 0.88)
+            ),
+            var(--on-surface);
+    color:  var(--on-surface);
+}
+
+.btn.Tonal:enabled:hover { /* Hovered */
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
+    ),
+    var(--secondary-container);
+    color:  var(--on-secondary-container);
+}
+
+.btn.Tonal:enabled:focus { /* Focused */
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.08)
+    ),
+    var(--secondary-container);
+    color:  var(--on-secondary-container);
+}
+
+.btn.Tonal:enabled:active { /* Pressed */
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.12),
+        rgba(0, 0, 0, 0.12)
+    ),
+    var(--secondary-container);
+    color:  var(--on-secondary-container);
+}
+
+
+
+.btn.Outlined:disabled{ /* Disabled */
+    cursor: default;
+    opacity: 38%;
+}
+.btn.Outlined:disabled{ /* Disabled */
+    background: 
+            linear-gradient(
+                rgba(255, 255, 255, 0.88),
+                rgba(255, 255, 255, 0.88)
+            ),
+            var(--on-surface);
+    color:  var(--on-surface);
+}
+
+.btn.Outlined:enabled:hover { /* Hovered */
+    border-color: var(--Outline);
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+    ),
+    var(--primary);
+    color:  var(--primary);
+}
+
+.btn.Outlined:enabled:focus { /* Focused */
+    border-color: var(--Outline);
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+    ),
+    var(--primary);
+    color:  var(--primary);
+}
+
+
+.btn.Outlined:enabled:active { /* Pressed */
+    border-color: var(--Outline);
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.88),
+        rgba(255, 255, 255, 0.88)
+    ),
+    var(--primary);
+    color:  var(--primary);
+}
+
+
+
+
+
+.btn.Text:disabled{ /* Disabled */
+    cursor: default;
+    opacity: 38%;
+}
+.btn.Text:disabled{ /* Disabled */
+    color:  var(--on-surface);
+}
+
+.btn.Text:enabled:hover { /* Hovered */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+    ),
+    var(--primary);
+    color:  var(--primary);
+}
+
+.btn.Text:enabled:focus { /* Focused */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.92),
+        rgba(255, 255, 255, 0.92)
+    ),
+    var(--primary);
+    color:  var(--primary);
+}
+
+
+.btn.Text:enabled:active { /* Pressed */
+    background: 
+    linear-gradient(
+        rgba(255, 255, 255, 0.88),
+        rgba(255, 255, 255, 0.88)
+    ),
+    var(--primary);
+    color:  var(--primary);
 }
