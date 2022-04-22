@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("/5/Fonts/Roboto-Medium.ttf") format("ttf");
+}
+
+:root {
+    --border : 1px solid gray;
+    --width : 280px;
+    --border-raduis: 3px;
+    --bg-color: transparent;
+    --font-size: 20px;
+    --text-color: #303030;
+    --text-color-icon: gray;
+    --padding-left: 45px;
+    --padding-right: 45px;
+}
+
+.inputField {
+
+    padding: 2px;
+}
+
+.inputField i {
+    color: var(--text-color-icon);
+    font-size: 24px;
+}
+
+.fa-user {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+.inputField input[type="text"] {
+   border: var(--border);
+   outline: none;
+   font-size: var(--font-size);
+   font-family:"Roboto Medium" ;
+   padding-left: var(--padding-left);
+   padding-top: 16px;
+   padding-bottom: 16px;
+   padding-right: var(--padding-right);
+   background-color: var(--bg-color);
+   width: var(--width);
+   border-radius: var(--border-raduis);
+   color: var(--text-color);
+}
+
+.inputHelp {
+    font-size: 15px;
+    font-family:"Roboto Medium" ;
+}
+
+.inputText {
+    font-family:"Roboto Medium" ;
+}
+
+.inputField input[type="text"]:active {
+    border: 1px solid #2b8cba;
+}
