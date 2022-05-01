@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "IranYekan";
+    src: url("/9/Fonts/IranYekan.ttf") format("ttf");
+}
+
+body {
+    background-color: #eee;
+}
+
+@media (max-width: 768px) {
+
+
+    .card {
+        margin: auto;
+        width: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 80px;
+        -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.2); 
+        box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+    
+
+    .card-img {
+        float: right;
+        width: 300px;
+        margin-left: 20px;
+    }
+
+    .card-title {
+        margin-top: 10px;
+        font-family: "IranYekan";
+        text-align: right;
+        padding-right: 20px;
+        font-size: 25px;
+    }
+
+    .card-subtitle {
+        font-family: "IranYekan";
+        text-align: right;
+        padding-right: 20px;
+        font-size: 15px;
+        color:#6d6d6d;
+    }
+    
+    .card-caption {
+        font-family: "IranYekan";
+        text-align: right;
+        padding-right: 20px;
+        font-size: 15px;
+        margin-top: 20px;
+        color:#6d6d6d;
+    }
+    
+    .card-button {
+        font-family: "IranYekan";
+        text-align: center;
+        font-size: 18px;
+        color:white;
+        width: 40%;
+        height: 50px;
+        border-radius: 7px;
+        background-color: #6200ee;
+        border: none;
+        margin-right: 8px;
+        margin-top: 30px;
+        
+    }
+    
+
+}
+
+@media (min-width: 768px) {
+
+
+    .card {
+        margin: auto;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 80px;
+        -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.2); 
+        box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+    
+    .card-img {
+        width: 100%;
+    }
+    
+    .card-title {
+        margin-top: 10px;
+        font-family: "IranYekan";
+        text-align: right;
+        padding-right: 20px;
+        font-size: 25px;
+    }
+    
+    .card-subtitle {
+        font-family: "IranYekan";
+        text-align: right;
+        padding-right: 20px;
+        font-size: 15px;
+        margin-top: -20px;
+        color:#6d6d6d;
+    }
+    
+    .card-caption {
+        font-family: "IranYekan";
+        text-align: right;
+        padding-right: 20px;
+        font-size: 15px;
+        margin-top: 15px;
+        color:#6d6d6d;
+    }
+    
+    .card-button {
+        font-family: "IranYekan";
+        text-align: center;
+        font-size: 18px;
+        color:white;
+        width: 90%;
+        height: 50px;
+        border-radius: 7px;
+        background-color: #6200ee;
+        border: none;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        
+    }
+    
+
+}
