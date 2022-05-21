@@ -1,0 +1,89 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator | Aryan Rashidi</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/07e2714d93.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="grid" >
+            <button class="grid-item grid-big result">0</button>
+            <button class="grid-item number">7</button>
+            <button class="grid-item number">8</button>
+            <button class="grid-item number">9</button>
+            <button class="grid-item operator">X</button>
+            <button class="grid-item number">4</button>
+            <button class="grid-item number">5</button>
+            <button class="grid-item number">6</button>
+            <button class="grid-item operator">-</button>
+            <button class="grid-item number">1</button>
+            <button class="grid-item number">2</button>
+            <button class="grid-item number">3</button>
+            <button class="grid-item operator">+</button>
+            <button class="grid-item grid-two number">0</button>
+            <button class="grid-item operator" value="=">=</button>
+            <button class="grid-item operator">÷</button>
+            <button class="grid-item grid-big operator grid-clear">Clear</button>
+        </div>
+        <script>
+            var cOperator = false;
+            var cFirst = false;
+            var ResultElement = document.querySelector(".result")
+
+            function calculate() {
+                // Mohasebe
+                if (cOperator && cFirst) {
+                    if (cOperator == "X") {
+                        ResultElement.innerHTML = cFirst * Number(ResultElement.innerHTML);
+                    } else if (cOperator == "+") {
+                        ResultElement.innerHTML = cFirst + Number(ResultElement.innerHTML);
+                    } else if (cOperator == "-") {
+                        ResultElement.innerHTML = cFirst - Number(ResultElement.innerHTML);
+                    } else if (cOperator == "÷") {
+                        ResultElement.innerHTML = cFirst / Number(ResultElement.innerHTML);
+                    }
+
+                    cOperator = false;
+                    cFirst = false;
+                }
+            }
+
+            function NumberClick(e) {
+                // Click Bar Rooye Number
+                if (ResultElement.innerHTML == "0") {
+                    ResultElement.innerHTML = this.innerHTML;
+                } else {
+                    ResultElement.innerHTML = ResultElement.innerHTML + this.innerHTML;
+                }
+            }
+
+            function OperatorClick(e) {
+                // Click Bar Rooye Operator
+                let input = this.innerHTML;
+                if ( input == "Clear") {
+                    cOperator = false;
+                    cFirst = false;
+                    ResultElement.innerHTML = "0";
+                } else if (input == "=") {
+                    calculate();
+                } else {
+                    cOperator = input;
+                    cFirst = Number(ResultElement.innerHTML);
+                    ResultElement.innerHTML = "0";
+                }
+            }
+
+            var Operators = document.querySelectorAll(".operator");
+            var Numbers = document.querySelectorAll(".number");
+            for(let Operator of Operators) {
+                Operator.addEventListener("click",OperatorClick)
+            }
+            for(let Number of Numbers) {
+                Number.addEventListener("click",NumberClick)
+            }
+            
+        </script>
+    </body>
+</html>
